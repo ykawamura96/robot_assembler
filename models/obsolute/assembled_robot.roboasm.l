@@ -1,0 +1,6 @@
+(((:initial-parts t) (:parts-type :xm430) (:parts-name :xm430_8972_0))
+ ((:robot-parts-point :xm430_8972_0/horn)
+  (:parts-name :wheel_8972_1)
+  (:parts-type :wheel)
+  (:parts-point :wheel_8972_1/center)
+  (:configuration :fixed)))

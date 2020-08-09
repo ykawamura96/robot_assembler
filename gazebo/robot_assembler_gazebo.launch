@@ -3,13 +3,17 @@
   <arg name="paused" default="false" />
   <!--arg name="gzangles" default="-J JOINT0 -0.2" / use with paused -->
   <arg name="gzangles" default="" />
-  <arg name="gzpose" default=" -z 0.3" />
+  <arg name="gzpose" default=" -z 0.38" />
   <arg name="control_config" default="$(arg model).gz_controller.yaml" />
 
+  <arg name="world_name" default="$(find robot_assembler)/world/robot_assebmler_test.world" />
   <arg name="use_xacro" default="false" />
+  <arg name="plot" default="false"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
     <arg name="paused" value="$(arg paused)" />
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="verbose" value="true"/>
   </include>
 
   <!-- Load universal robotic description format (URDF) -->
@@ -26,12 +30,33 @@
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(arg control_config)" command="load"/>
-
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager"
-        type="spawner" respawn="false"
-        output="screen" args="--shutdown-timeout 0.1
+        type="spawner" respawn="false" ns="/wheeled_robot"
+        output="screen" args="joint0_position_controller
+                              joint1_position_controller
+                              joint2_position_controller
+                              joint3_position_controller
+                              joint4_position_controller
+                              joint5_position_controller
+                              joint6_position_controller
+                              joint7_position_controller
+                              joint8_position_controller
+                              joint9_position_controller
+                              joint10_position_controller
+                              joint11_position_controller
+                              joint12_position_controller
+                              joint13_position_controller
                               joint_state_controller
-                              fullbody_controller" />
+                              --shutdown-timeout 0.1"/>
+
+
+  <!-- plotjuggler -->
+  <group if="$(arg plot)">
+    <node name="plotjuggler_with_layout"
+          pkg="plotjuggler"
+          type="PlotJuggler"
+          args="--layout $(find robot_assembler)/config/simple_wheels.xml -n"/>
+  </group>
 
 </launch>

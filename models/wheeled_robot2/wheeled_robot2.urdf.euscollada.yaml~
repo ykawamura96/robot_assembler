@@ -1,0 +1,45 @@
+## modified by manual
+rleg:
+  - JOINT0 : rleg-crotch-y
+  - JOINT1 : rleg-crotch-r
+  - JOINT2 : rleg-crotch-p
+  - JOINT3 : rleg-knee-p
+  - JOINT4 : rleg-ankle-p
+  - JOINT5 : rleg-ankle-r
+  - JOINT6 : rleg-wheel
+lleg:
+  - JOINT7 : lleg-crotch-y
+  - JOINT8 : lleg-crotch-r
+  - JOINT9 : lleg-crotch-p
+  - JOINT10 : lleg-knee-p
+  - JOINT11 : lleg-ankle-p
+  - JOINT12 : lleg-ankle-r
+  - JOINT13 : lleg-wheel
+
+## end-coords
+rleg-end-coords:
+  parent : LINK5
+  translate : [0, 0.032, 0.019]
+  rotate : [0.57735, -0.57735, 0.57735, 120.0]
+lleg-end-coords:
+  parent : LINK12
+  translate : [0, 0.032, 0.019]
+  rotate : [0.57735, -0.57735, 0.57735, 120.0]
+
+## pre-defined posture
+angle-vector:
+  reset-pose : [0, 0, 20, -40, 20, 0, 0,
+                0, 0, 20, -40, 20, 0, 0,
+                ]
+## sensors
+sensors:
+  - {sensor_name: 'imu_sensor', sensor_type: 'acceleration', parent_link: 'BASE', gazebo_frame: 'BASE'}
+  # - {sensor_name: 'rhsensor', sensor_type: 'base_force6d', parent_link: 'RARM_LINK7', gazebo_joint: 'JOINT6' , gazebo_topic: 'rhsensor'}
+  # - {sensor_name: 'lhsensor', sensor_type: 'base_force6d', parent_link: 'LARM_LINK7', gazebo_joint: 'JOINT11', gazebo_topic: 'lhsensor'}
+  - {sensor_name: 'head_cam', sensor_type: 'camera', parent_link: 'BASE',
+     translate: '-0.03 0 0', rotate: '-0.57735 -0.57735 0.57735 120'}
+  - {sensor_name: 'body_range', sensor_type: 'range', parent_link: 'BASE', translate: '0 0 -0.02'}
+
+  
+
+

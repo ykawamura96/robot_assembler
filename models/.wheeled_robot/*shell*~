@@ -1,0 +1,51 @@
+bash: bind: 警告: 行編集が有効になっていません
+y-kawamura@capricorn:~/ros/new_ws/src/robot_assembler/models/wheeled_robot$ ls
+wheeled_robot.l  wheeled_robot.roboasm.l  wheeled_robot.urdf  wheeled_robot.urdf.euscollada.yaml  wheeled_robot.urdf.gz_controller.yaml
+y-kawamura@capricorn:~/ros/new_ws/src/robot_assembler/models/wheeled_robot$ roseus wheeled_robot.l
+configuring by "/opt/ros/melodic/share/euslisp/jskeus/eus//lib/eusrt.l"
+;; readmacro ;; object ;; packsym ;; common ;; constants ;; stream ;; string ;; loader ;; pprint ;; process ;; hashtab ;; array ;; mathtran ;; eusdebug ;; eusforeign ;; extnum ;; coordinates ;; tty ;; history ;; toplevel ;; trans ;; comp ;; builtins ;; par ;; intersection ;; geoclasses ;; geopack ;; geobody ;; primt ;; compose ;; polygon ;; viewing ;; viewport ;; viewsurface ;; hid ;; shadow ;; bodyrel ;; dda ;; helpsub ;; eushelp ;; xforeign ;; Xdecl ;; Xgraphics ;; Xcolor ;; Xeus ;; Xevent ;; Xpanel ;; Xitem ;; Xtext ;; Xmenu ;; Xscroll ;; Xcanvas ;; Xtop ;; Xapplwin 
+connected to Xserver DISPLAY=:0
+X events are being asynchronously monitored.
+;; pixword ;; RGBHLS ;; convolve ;; piximage ;; pbmfile ;; image_correlation ;; oglforeign ;; gldecl ;; glconst ;; glforeign ;; gluconst ;; gluforeign ;; glxconst ;; glxforeign ;; eglforeign ;; eglfunc ;; glutil ;; gltexture ;; glprim ;; gleus ;; glview ;; toiv-undefined ;; fstringdouble irtmath irtutil irtc irtgeoc irtgraph ___time ___pgsql irtgeo euspqp pqp irtscene irtmodel irtdyna irtrobot irtsensor irtbvh irtcollada irtpointcloud irtx eusjpeg euspng png irtimage irtglrgb 
+;; extending gcstack 0x558a31fb0690[16374] --> 0x558a324398a0[32748] top=3d66
+irtgl irtglc irtviewer 
+EusLisp 9.27( 1.2.1) for Linux64 created on ip-172-30-1-167(Wed Mar 4 01:33:18 UTC 2020)
+roseus ;; loading roseus("1.7.4") on euslisp((9.27 ip-172-30-1-167 Wed Mar 4 01:33:18 UTC 2020  1.2.1))
+eustf roseus_c_util 1.irteusgl$ 
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 0.0 / 0.0 0.0 0.0>
+2.irteusgl$ objects (list *robot*)
+;; (make-irtviewer) executed
+(#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 0.0 / 0.0 0.0 0.0>)
+3.irteusgl$ send *robot* :methods
+(:init :joint0 :joint1 :joint10 :joint11 :joint12 :joint13 :joint2 :joint3 :joint4 :joint5 :joint6 :joint7 :joint8 :joint9 :links :base_lk :link0_lk :link1_lk :link10_lk :link11_lk :link12_lk :link13_lk :link2_lk :link3_lk :link4_lk :link5_lk :link6_lk :link7_lk :link8_lk :link9_lk :rarm-joint0 :rarm-joint1 :rarm-joint2 :rarm-joint3 :rarm-joint4 :rarm-joint5 :rarm-joint6 :rarm-joint7 :rarm-joint8 :rarm-joint9 :rarm-joint10 :rarm-joint11 :rarm-joint12 :rarm-joint13 :_make_instance_base_geom0 :_make_instance_base_geom1 :_make_instance_base_geom2 :_make_instance_link0_geom0 :_make_instance_link1_geom0 :_make_instance_link1_geom1 :_make_instance_link1_geom2 :_make_instance_link2_geom0 :_make_instance_link2_geom1 :_make_instance_link2_geom2 :_make_instance_link3_geom0 :_make_instance_link3_geom1 :_make_instance_link4_geom0 :_make_instance_link4_geom1 :_make_instance_link4_geom2 :_make_instance_link5_geom0 :_make_instance_link5_geom1 :_make_instance_link6_geom0 :_make_instance_link7_geom0 :_make_instance_link8_geom0 :_make_instance_link8_geom1 :_make_instance_link8_geom2 :_make_instance_link9_geom0 :_make_instance_link9_geom1 :_make_instance_link9_geom2 :_make_instance_link10_geom0 :_make_instance_link10_geom1 :_make_instance_link11_geom0 :_make_instance_link11_geom1 :_make_instance_link11_geom2 :_make_instance_link12_geom0 :_make_instance_link12_geom1 :_make_instance_link13_geom0 :init-ending :change-visual :fullbody-inverse-kinematics :make-collision-model-for-links :init-ending :rarm-end-coords :larm-end-coords :rleg-end-coords :lleg-end-coords :head-end-coords :torso-end-coords :rarm-root-link :larm-root-link :rleg-root-link :lleg-root-link :head-root-link :torso-root-link :limb :inverse-kinematics-loop-for-look-at :gripper :camera :force-sensor :imu-sensor :get-sensor-method :get-sensors-method-by-limb :force-sensors :imu-sensors :cameras :larm :rarm :lleg :rleg :head :torso :arms :legs :look-at-hand :inverse-kinematics :inverse-kinematics-loop :look-at-target :init-pose :torque-vector :distribute-total-wrench-to-torque-method-default :calc-force-from-joint-torque :fullbody-inverse-kinematics :joint-angle-limit-nspace-for-6dof :joint-order :print-vector-for-robot-limb :calc-zmp-from-forces-moments :foot-midcoords :fix-leg-to-coords :move-centroid-on-foot :calc-walk-pattern-from-footstep-list :draw-gg-debug-view :gen-footstep-parameter :footstep-parameter :go-pos-params->footstep-list :go-pos-quadruped-params->footstep-list :support-polygons :support-polygon :make-support-polygons :make-sole-polygon :make-default-linear-link-joint-between-attach-coords :calc-static-balance-point :init :init-ending :links :joint-list :link :joint :end-coords :bodies :faces :update-descendants :angle-vector :find-link-route :link-list :make-joint-min-max-table :make-min-max-table-using-collision-check :plot-joint-min-max-table-common :plot-joint-min-max-table :calc-target-axis-dimension :calc-union-link-list :calc-target-joint-dimension :calc-inverse-jacobian :calc-gradh-from-link-list :calc-jacobian-from-link-list :calc-joint-angle-speed :calc-joint-angle-speed-gain :collision-avoidance-links :collision-avoidance-link-pair-from-link-list :collision-avoidance-calc-distance :collision-avoidance-args :collision-avoidance :move-joints :find-joint-angle-limit-weight-old-from-union-link-list :reset-joint-angle-limit-weight-old :calc-weight-from-joint-limit :calc-inverse-kinematics-weight-from-link-list :calc-nspace-from-joint-limit :calc-inverse-kinematics-nspace-from-link-list :move-joints-avoidance :inverse-kinematics-args :draw-collision-debug-view :inverse-kinematics-loop :inverse-kinematics :ik-convergence-check :calc-vel-from-pos :calc-vel-from-rot :collision-check-pairs :self-collision-check :calc-grasp-matrix :inverse-kinematics-for-closed-loop-forward-kinematics :calc-jacobian-for-interlocking-joints :calc-vel-for-interlocking-joints :set-midpoint-for-interlocking-joints :interlocking-joint-pairs :check-interlocking-joint-angle-validity :update-mass-properties :calc-inertia-matrix-from-link-list :calc-cog-jacobian-from-link-list :cog-jacobian-balance-nspace :calc-vel-for-cog :difference-cog-position :cog-convergence-check :max-torque-vector :torque-ratio-vector :calc-torque-buffer-args :calc-torque :calc-torque-without-ext-wrench :calc-torque-from-vel-acc :calc-root-coords-vel-acc-from-pos :calc-av-vel-acc-from-pos :calc-torque-from-ext-wrenches :calc-zmp :calc-cop-from-force-moment :wrench-vector->wrench-list :wrench-list->wrench-vector :calc-contact-wrenches-from-total-wrench :draw-torque :weight :centroid :inertia-tensor :preview-control-dynamics-filter :parent :descendants :inheritance :leaves :assoc :dissoc :clear-assoc :obey :disobey :newcoords :changed :worldrot :worldpos :worldcoords :copy-worldcoords :update :parentcoords :transform-vector :rotate-vector :inverse-transform-vector :inverse-transformation :transformation :transform :move-to :rotate-with-matrix :rotate :orient-with-matrix :orient :parent-vector :parent-orientation :manager :init :inverse-rotate-vector :make-pqpmodel :dimension :rot :pos :x-axis :y-axis :z-axis :name :newcoords :replace-rot :replace-pos :replace-coords :copy-rot :copy-pos :copy-coords :coords :worldrot :worldpos :worldcoords :copy-worldcoords :parentcoords :changed :reset-coords :move-to :rotate-vector :transform-vector :inverse-transform-vector :inverse-transformation :transformation :transform :rotate-with-matrix :rotate :orient-with-matrix :orient :parent-vector :parent-orientation :translate :locate :scale :euler :euler-angle :rpy :rpy-angle :rotation-angle :4x4 :prin1 :create :init :axis :difference-position :difference-rotation :move-coords :inverse-rotate-vector :vertices :draw-on :plist :get :put :name :remprop :prin1 :prin1 :warning :error :slots :methods :super :get-val :set-val)
+4.irteusgl$ .(setq *box* (make-cube 100 100 100))
+sh: 1: Syntax error: word unexpected (expecting ")")
+512
+5.irteusgl$ .(setq *box* (make-cube 100 100 100))
+sh: 1: Syntax error: word unexpected (expecting ")")
+512
+6.irteusgl$ (setq *box* (make-cube 100 100 100))
+#<body #X558a3346e928 (:cube 100.0 100.0 100.0) 0.0 0.0 0.0 / 0.0 0.0 0.0>
+7.irteusgl$ (objects (list *robot* *box*))
+(#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 0.0 / 0.0 0.0 0.0> #<body #X558a3346e928 (:cube 100.0 100.0 100.0) 0.0 0.0 0.0 / 0.0 0.0 0.0>)
+8.irteusgl$ (send *robot* :translate #f(0 0 500))
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 500.0 / 0.0 0.0 0.0>
+9.irteusgl$ (send *robot* :translate #f(0 0 300) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 800.0 / 0.0 0.0 0.0>
+10.irteusgl$ (send *robot* :translate #f(0 0 300) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 1100.0 / 0.0 0.0 0.0>
+11.irteusgl$ (send *robot* :move-to (make-coords))
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 1100.0 / 0.0 0.0 0.0>
+12.irteusgl$ (send *robot* :move-to (make-coords) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 0.0 / 0.0 0.0 0.0>
+13.irteusgl$ (send *robot* :move-to (make-coords :pos #f(0 0 300)) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 0.0 300.0 / 0.0 0.0 0.0>
+14.irteusgl$ (send *robot* :move-to (make-coords :pos #f(0 40 300)) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 40.0 300.0 / 0.0 0.0 0.0>
+15.irteusgl$ (send *robot* :move-to (make-coords :pos #f(0 40 300)) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 40.0 300.0 / 0.0 0.0 0.0>
+16.irteusgl$ (send *robot* :move-to (make-coords :pos #f(0 50 300)) :world)
+#<wheeled_robot-robot #X558a32feb318 wheeled_robot  0.0 50.0 300.0 / 0.0 0.0 0.0>
+17.irteusgl$ (send *robot* :angle-vector)
+#f(0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0)
+18.irteusgl$ (send *robot* :angle-vector #f(0.0 0.0 30.0 -80.0 30.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0))

@@ -1,0 +1,3 @@
+(load "./wheeled_robot.l")
+(setq *robot* (wheeled_robot))
+(setq *box* (make-cube ))

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root version="2.3.8">
+ <tabbed_widget parent="main_window" name="Main Window">
+  <plotmatrix tab_name="plot" columns="1" rows="2">
+   <plot style="Lines" col="0" row="0">
+    <range top="3.298691" bottom="-3.298716" left="5.600000" right="15.604000"/>
+    <limitY/>
+    <curve name="/wheeled_robot/joint13_position_controller/command/data" B="69" R="152" G="66" custom_transform="noTransform"/>
+    <curve name="/wheeled_robot/joint13_position_controller/state/command" B="40" R="214" G="39" custom_transform="noTransform"/>
+    <curve name="/wheeled_robot/joint_states/JOINT13/position" B="180" R="31" G="119" custom_transform="noTransform"/>
+    <transform value="Custom::noTransform"/>
+   </plot>
+   <plot style="Lines" col="0" row="1">
+    <range top="3.298669" bottom="-3.298715" left="5.600000" right="15.604000"/>
+    <limitY/>
+    <curve name="/wheeled_robot/joint6_position_controller/command/data" B="34" R="188" G="189" custom_transform="noTransform"/>
+    <curve name="/wheeled_robot/joint6_position_controller/state/command" B="56" R="26" G="201" custom_transform="noTransform"/>
+    <curve name="/wheeled_robot/joint_states/JOINT6/position" B="14" R="255" G="127" custom_transform="noTransform"/>
+    <transform value="noTransform"/>
+   </plot>
+  </plotmatrix>
+  <plotmatrix tab_name="plot" columns="1" rows="1">
+   <plot style="Lines" col="0" row="0">
+    <range top="20.753564" bottom="-20.809045" left="-65.020000" right="-55.020000"/>
+    <limitY/>
+    <curve name="/wheeled_robot/joint_states/JOINT6/effort" B="193" R="241" G="76" custom_transform="noTransform"/>
+    <curve name="/wheeled_robot/joint_states/JOINT6/position" B="14" R="255" G="127" custom_transform="noTransform"/>
+    <curve name="/wheeled_robot/joint_states/JOINT6/velocity" B="189" R="148" G="103" custom_transform="noTransform"/>
+    <transform value="noTransform"/>
+   </plot>
+  </plotmatrix>
+  <currentPlotMatrix index="0"/>
+ </tabbed_widget>
+ <use_relative_time_offset enabled="1"/>
+ <!-- - - - - - - - - - - - - - - -->
+ <!-- - - - - - - - - - - - - - - -->
+ <Plugins>
+  <plugin ID="DataLoad CSV">
+   <default time_axis=""/>
+  </plugin>
+  <plugin ID="DataLoad ROS bags">
+   <use_header_stamp value="false"/>
+   <use_renaming_rules value="true"/>
+   <discard_large_arrays value="true"/>
+   <max_array_size value="100"/>
+  </plugin>
+  <plugin ID="DataLoad ULog"/>
+  <plugin ID="ROS Topic Subscriber">
+   <use_header_stamp value="false"/>
+   <use_renaming_rules value="true"/>
+   <discard_large_arrays value="true"/>
+   <max_array_size value="100"/>
+  </plugin>
+  <plugin ID="ROS /rosout Visualization" status="idle"/>
+  <plugin ID="ROS Topic Re-Publisher" status="idle"/>
+ </Plugins>
+ <!-- - - - - - - - - - - - - - - -->
+ <previouslyLoaded_Datafiles/>
+ <previouslyLoaded_Streamer name="ROS Topic Subscriber"/>
+ <!-- - - - - - - - - - - - - - - -->
+ <customMathEquations/>
+ <snippets/>
+ <!-- - - - - - - - - - - - - - - -->
+</root>
+
